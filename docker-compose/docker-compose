@@ -22,7 +22,7 @@ services:
         ports:
             - '8080:8080'
         volumes:
-            - app:/usr/local/tomcat/webapps
+            - app:/usr/local/tomcat/wappseb
             - '.docker-compose/config/:/usr/local/tomcat/webapps/ROOT'
         depends_on: 
             - build_war
