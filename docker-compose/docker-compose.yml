@@ -28,7 +28,7 @@ services:
               target: /usr/local/tomcat/webapps/
             - type: bind
               source: ./Config.properties
-              target: /usr/local/tomcat/webapps/ROOT/
+              target: /usr/local/tomcat/webapps/ROOT/Config.properties
         depends_on: 
             - build_war
             - mysql_srv
