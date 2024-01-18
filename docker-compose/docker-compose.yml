@@ -21,8 +21,14 @@ services:
         image: tomcat:alpine
         ports:
             - '8080:8080'
+
         volumes:
-            - 'app:/usr/local/tomcat/webapps/'
+            - type: volume
+                source: app
+                target: /usr/local/tomcat/webapps/
+            - type: bind
+                source: ./Config.properties
+                target: /usr/local/tomcat/webapps/ROOT/
         depends_on: 
             - build_war
             - mysql_srv
