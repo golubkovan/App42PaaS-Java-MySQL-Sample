@@ -22,7 +22,7 @@ services:
         ports:
             - '8080:8080'
         volumes:
-            - '.docker-compose/config/:/usr/local/tomcat/webapps/ROOT'
+            - 'app:/usr/local/tomcat/webapps/'
         depends_on: 
             - build_war
             - mysql_srv
