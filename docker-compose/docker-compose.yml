@@ -24,11 +24,11 @@ services:
 
         volumes:
             - type: volume
-                source: app
-                target: /usr/local/tomcat/webapps/
+              source: app
+              target: /usr/local/tomcat/webapps/
             - type: bind
-                source: ./Config.properties
-                target: /usr/local/tomcat/webapps/ROOT/
+              source: ./Config.properties
+              target: /usr/local/tomcat/webapps/ROOT/
         depends_on: 
             - build_war
             - mysql_srv
