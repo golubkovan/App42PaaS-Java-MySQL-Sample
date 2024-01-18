@@ -6,7 +6,7 @@ services:
             context: ./docker
             dockerfile: WarBuild.Dockerfile
         volumes:
-            - app:/tmp
+            - 'app:/tmp/'
 
     mysql_srv:
         image: mysql:5.6.51
@@ -22,7 +22,6 @@ services:
         ports:
             - '8080:8080'
         volumes:
-            - app:/usr/local/tomcat/wappseb
             - '.docker-compose/config/:/usr/local/tomcat/webapps/ROOT'
         depends_on: 
             - build_war
