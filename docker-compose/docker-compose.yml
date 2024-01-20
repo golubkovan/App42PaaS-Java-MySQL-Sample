@@ -18,11 +18,11 @@ services:
             - '3306:3306'
 
     dep_war: 
-        build:
+        image: tomcat:alpine
             context: ./docker
-            dockerfile: Prod.Dockerfile
         volumes:
             - 'app:/usr/local/tomcat/webapps/'
+            - './config:/usr/local/tomcat/ROOT/'
         depends_on: 
             - build_war
             - mysql_srv
