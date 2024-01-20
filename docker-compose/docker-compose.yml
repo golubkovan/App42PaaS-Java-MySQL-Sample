@@ -26,6 +26,8 @@ services:
         depends_on: 
             - build_war
             - mysql_srv
+        ports:
+            - '8080:8080'
 
 volumes:
     app:
