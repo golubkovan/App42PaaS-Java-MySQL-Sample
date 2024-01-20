@@ -19,7 +19,7 @@ services:
 
     dep_war: 
         image: tomcat:alpine
-            context: ./docker
+        context: ./docker
         volumes:
             - 'app:/usr/local/tomcat/webapps/'
             - './config:/usr/local/tomcat/ROOT/'
