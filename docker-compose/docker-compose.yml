@@ -19,10 +19,9 @@ services:
 
     dep_war: 
         image: tomcat:alpine
-        context: ./docker
         volumes:
             - 'app:/usr/local/tomcat/webapps/'
-            - './config:/usr/local/tomcat/ROOT/'
+            - './docker/config:/usr/local/tomcat/ROOT/'
         depends_on: 
             - build_war
             - mysql_srv
