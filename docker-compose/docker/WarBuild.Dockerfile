@@ -5,3 +5,4 @@ RUN mvn package
 #RUN mkdir /tmp/ROOT
 #ADD ./Config.properties /tmp/ROOT/
 RUN cp ./target/App42PaaS-Java-MySQL-Sample-0.0.1-SNAPSHOT.war /tmp/APJMS.war
+EXPOSE 8081
